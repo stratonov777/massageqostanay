@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Massage</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styleeffect.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/massage.css">
+    <link rel="stylesheet" href="css/face.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/slider.css">
+
+    <style>
+   [data-tooltip] {
+    position: relative; /* Относительное позиционирование */ 
+   }
+   [data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 300px; /* Ширина подсказки */
+    left: 0; top: 0; /* Положение подсказки */
+    background: #3989c9; /* Синий цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 0.5em; /* Поля вокруг текста */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+    pointer-events: none; /* Подсказка */
+    opacity: 0; /* Подсказка невидима */
+    transition: 1s; /* Время появления подсказки */
+   } 
+   [data-tooltip]:hover::after {
+    opacity: 1; /* Показываем подсказку */
+    top: 2em; /* Положение подсказки */
+   }
+  </style>
+<!-- <script ENGINE="text/javascript" src="https://code.jquery.com/jquery-1.11.2.js "></script> -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <ul class="menu">
+                    <li class="menu_item"><a href="#" class="menu_link">Главная</a></li>
+                    <li class="menu_item"><a href="#view" class="menu_link">Услуги массажа</a></li>
+                    <li class="menu_item"><a href="#lern" class="menu_link">Обучение</a></li>
+                    <li class="menu_item"><a href="#me" class="menu_link">Про меня</a></li>
+                    <li class="menu_item"><a href="#sertif" class="menu_link">Сертификаты</a></li>
+                    <li class="menu_item"><a href="#ring" class="menu_link">Оставить заявку</a></li>
+                </ul>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        <div class="subheader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-4 offset-md-1">
+                        <a href="#" class="subheader_logo"><img src="icons/logo.png" alt="logo"></a>
+                    </div>
+    
+                    <div class="xs-hidden col-md-3 offset-md-1 col-xl-2 offset-xl-2">
+                        <div class="subheader_call">Звоните ежедневно</div>
+                        <a href="tel:84957970988" class="subheader_phone">8 777 972 49 85</a>
+                    </div>
+    
+                    <div class="col-6 col-md-3">
+                        <button name="write" class="j-submit-report subheader_btn" onclick="window.location.href='tel:84957970988'">Позвонить мне</button>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="promo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 offset-md-0 col-lg-10 offset-lg-1">
+                    <h1 class="promo_header">МАССАЖ ДЛЯ ВСЕЙ СЕМЬИ!</h1>
+                    <br>
+                    <h2 class="promo_subheader">приглашаю вас на лечебный и тонизирующий массаж!</h2>
+                    <br>
+                    <div class="promo_descr">
+                        Я, Татьяна Шамина, специализируюсь на реабилитационном (ручном) и аппаратном массажах. Массаж помогает восстановлению нормальной деятельности всего организма, а также входит в комплекс лечебных, реабилитационных и профилактических мероприятий.
+                        <br><br>
+                        Лечебный массаж на дому отлично помогает при заболеваниях опорно-двигательного аппарата: остеохондрозе, артрите, радикулите, параличе конечностей и восстановлении после травм. А также при заболеваниях кишечника, дыхательных путей и проблемах с кровообращением.
+                    </div>
+                    <button class="promo_btn" onclick="window.location.href='#ring'">записаться на прием!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reasons">
+        <div class="container">
+            <h2 class="title">8 причин записаться на курс массажа</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="reasons_block">
+                        <div class="reasons_round threed">
+                            <img src="icons/reasons/reason_1.png" alt="reason">
+                        </div>
+                        <div class="reasons_descr">
+                            <div class="reasons_subtitle">Обезболивание</div>
+                            <div class="reasons_text">
+                                Массаж избавляет от мышечной и головной боли. И значительно улучшает состояние при хронических мигренях. Пройденный курс уменьшит количество и остроту приступов в будущем. 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="reasons_block">
+                        <div class="reasons_round threed">
+                            <img src="icons/reasons/reason_2.png" alt="reason">
+                        </div>
+                        <div class="reasons_descr">
+                            <div class="reasons_subtitle">Очищение от шлаков и токсинов</div>
+                            <div class="reasons_text">
+                                Глубокая стимуляция мягких тканей во время массажа способствует выводу шлаков и токсинов из организма. Также выводится и лишняя жидкость, за счет чего пропадает отечность и одутловатость. 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="reasons_block">
+                        <div class="reasons_round threed">
+                            <img src="icons/reasons/reason_3.png" alt="reason">
+                        </div>
+                        <div class="reasons_descr">
+                            <div class="reasons_subtitle">Улучшение кровотока</div>
+                            <div class="reasons_text">
+                                Массаж разгоняет кровь, а это значит, что кожа, волосы, внутренние органы получают больше питательных веществ и кислорода. 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="reasons_block">
+                        <div class="reasons_round threed">
+                            <img src="icons/reasons/reason_4.png" alt="reason">
+                        </div>
+                        <div class="reasons_descr">
+                            <div class="reasons_subtitle">Антистресс</div>
+                            <div class="reasons_text">
+                                Во время массажа аккуратно и глубоко прорабатываются все мышцы, что ведет к полному расслаблению. 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="reasons_block">
+                        <div class="reasons_round threed">
+                            <img src="icons/reasons/reason_5.png" alt="reason">
+                        </div>
+                        <div class="reasons_descr">
+                            <div class="reasons_subtitle">Улучшение осанки</div>
+                            <div class="reasons_text">
+                                Во время массажа происходит глубокое и интенсивное воздействие на мышцы, они полностью расслабляются. Уходят даже сильные и хронические мышечные зажимы.  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="reasons_block">
+                        <div class="reasons_round threed">
+                            <img src="icons/reasons/reason_6.png" alt="reason">
+                        </div>
+                        <div class="reasons_descr">
+                            <div class="reasons_subtitle">Коррекция фигуры</div>
+                            <div class="reasons_text">
+                                Сход отека – это всегда и потеря нескольких см в объеме. За счет этого возможен эффект похудения. Кроме того, есть особые виды массажа, которые воздействуют именно на жировые отложения.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="reasons_block">
+                        <div class="reasons_round threed">
+                            <img src="icons/reasons/reason_7.png" alt="reason">
+                        </div>
+                        <div class="reasons_descr">
+                            <div class="reasons_subtitle">Больше энергии</div>
+                            <div class="reasons_text">
+                                После массажа усталость как рукой снимает. Даже такую, что накопилась за сложную рабочую неделю. 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="reasons_block">
+                        <div class="reasons_round threed">
+                            <img src="icons/reasons/reason_8.png" alt="reason">
+                        </div>
+                        <div class="reasons_descr">
+                            <div class="reasons_subtitle">Укрепление иммунитета</div>
+                            <div class="reasons_text">
+                                Во время массажа лимфоузлы стимулируются, что способствует улучшению их работы.Кроме того снижается уровень кортизола.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="mobile" id="view">
+        <div class="container">
+            <h2 class="title">услуги массажа</h2>
+            <div class="subtitle">Выбирите услугу, совершите звонок и запишитесь на прием, используя свой мобильный телефон</div>
+            <div class="row">
+
+                <div class="hover-text-one col-md-6 col-lg-4 mobile_item">
+                    <figure class="effect-text-four">
+                      <img src="img/bg/mobile_screen_1.png" alt=""/>
+                        <figcaption>
+                      <h3>ЛФК</h3>
+                      <p>от 10000тг</p>
+                        </figcaption>			
+                     </figure>
+                </div>
+
+                <div class="hover-text-one col-md-6 col-lg-4 mobile_item">
+                    <figure class="effect-text-four">
+                      <img src="img/bg/mobile_screen_7.png" alt=""/>
+                        <figcaption>
+                      <h3>Тейпирование</h3>
+                      <p>от 1000тг</p>
+                        </figcaption>			
+                     </figure>
+                </div>
+
+                <div class="hover-text-one col-md-6 col-lg-4 mobile_item">
+                    <figure class="effect-text-four">
+                      <img src="img/bg/mobile_screen_2.png" alt=""/>
+                        <figcaption>
+                      <h3>Аппаратный</h3>
+                      <p>от 3500тг</p>
+                        </figcaption>			
+                     </figure>
+                </div>
+
+                <div class="hover-text-one col-md-6 col-lg-4 mobile_item">
+                    <figure class="effect-text-four">
+                      <img src="img/bg/mobile_screen_3.png" alt=""/>
+                        <figcaption>
+                      <h3>медовый</h3>
+                      <p>от 3000тг</p>
+                        </figcaption>			
+                     </figure>
+                </div>
+
+                <div class="hover-text-one col-md-6 col-lg-4 mobile_item">
+                    <figure class="effect-text-four">
+                      <img src="img/bg/mobile_screen_4.png" alt=""/>
+                        <figcaption>
+                      <h3>Детский</h3>
+                      <p>от 2500тг</p>
+                        </figcaption>			
+                     </figure>
+                </div>
+
+                <div class="hover-text-one col-md-6 col-lg-4 mobile_item">
+                    <figure class="effect-text-four">
+                      <img src="img/bg/mobile_screen_5.png" alt=""/>
+                        <figcaption>
+                      <h3>Массаж стоп</h3>
+                      <p>от 3000тг</p>
+                        </figcaption>			
+                     </figure>
+                </div>
+
+                <div class="hover-text-one col-md-6 col-lg-4 mobile_item">
+                    <figure class="effect-text-four">
+                      <img src="img/bg/mobile_screen_6.png" alt=""/>
+                        <figcaption>
+                      <h3>Гуа ша</h3>
+                      <p>от 2500тг</p>
+                        </figcaption>			
+                     </figure>
+                </div>
+
+                <div class="hover-text-one col-md-6 col-lg-4 mobile_item">
+                    <figure class="effect-text-four">
+                      <img src="img/bg/mobile_screen_8.png" alt=""/>
+                        <figcaption>
+                      <h3>Стоун терапия</h3>
+                      <p>от 3000тг</p>
+                        </figcaption>			
+                     </figure>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="require" id="lern">
+        <div class="container">
+            <h2 class="title">обучение массажу</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="require_block">
+                    <div class="require_title">
+                        ПРЕЙСКУРАНТ на обучение массажу:
+                    </div>
+                    <ul class="require_list">
+                        <li>Классический(база) - 50.000т.</li>
+                        <li>Спортивный(база) - 50.000т.</li>
+                        <li>Самомассаж - 50.000т.</li>
+                        <li>Антицеллюлитный - 50.000т.</li>
+                        <li>Детский(база) - 50.000т.</li>
+                        <li>Массаж лица - 40.000т.</li>
+                        <li>Массаж стоп - 25.000т.</li>
+                    </ul>
+                    <div class="require_descr" id="require1">
+                        Работая массажистом вы сможете зарабатывать от 150.000т.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="require_block">
+                    <div class="require_title">
+                        Не классические техники массажа
+                    </div>
+                    <ul class="require_list">
+                        <li>Гуа-Ша - 25.000т.</li>
+                        <li>Стоунтерапия - 25.000т.</li>
+                        <li >Баночный - 25.000т.</li>
+                        <li >Медовый - 25.000т.</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </section>
+
+    <section class="Sh_T_A" id="me">
+        <div class="container">
+            <h2 class="title">массаж проводит опытный специалист</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="Sh_T_A_block">
+                    <img src="img/avatar.png" alt="Шамина Т.А." class="choice_img scale">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="Sh_T_A_block">
+                    <div class="Sh_T_A_title">
+                        Давайте знакомиться! Меня зовут Татьяна и я дипломированный массажист. Я люблю своё дело всей душой и стараюсь постоянно развиваться в этом направлении. ⠀Что меня больше всего вдохновляет в работе? Конечно же, обратная связь от клиентов: видимый результат, довольные лица, многочисленные рекомендации, тёплые слова. Отмечу, что с большим вниманием отношусь к вашей безопасности и работаю исключительно с одноразовыми материалами! Приглашаю Вас на услуги по аппаратному, антицелюлитному, медовому и общему массажам. Вас ждёт уютная атмосфера, тихая музыка и приятные цены!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="slider">
+                        <div class="slide-list">
+                            <div class="slide-wrap">
+                                <div class="slide-item">
+                                    <img width="280" height="320" src="img/img-1.jpeg" alt="" />
+                                </div>
+                                <div class="slide-item">
+                                    <img width="280" height="320" src="img/img-2.jpeg" alt="" />
+                                </div>
+                                <div class="slide-item">
+                                    <img width="280" height="320" src="img/img-3.jpeg" alt="" />
+                                </div>
+                                <div class="slide-item">
+                                    <img width="280" height="320" src="img/img-4.jpeg" alt="" />
+                                </div>
+                                <!-- <div class="slide-item">
+                                    <img width="280" height="320" src="img/img-5.jpeg" alt="" />
+                                </div>
+                                <div class="slide-item">
+                                    <img width="280" height="320" src="img/img-6.jpeg" alt="" />
+                                </div>
+                                <div class="slide-item">
+                                    <img width="280" height="320" src="img/img-7.jpeg" alt="" />
+                                </div> -->
+                                <div class="slide-item">
+                                    <img width="280" height="320" src="img/img-8.jpeg" alt="" />
+                                </div>
+                                <div class="slide-item">
+                                    <img width="280" height="320" src="img/img-9.jpeg" alt="" />
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="navy prev-slide"></div>
+                        <div class="navy next-slide"></div>
+                        <div class="auto play"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <section class="wating" id="sertif">
+        <div class="container">
+            <h2 class="wating_header">Порадуй себя и своих близких</h2>
+            <div class="waiting_divider"></div>
+            <div class="wating_subheader">Специально для вас представлены мои сертификаты на услуги по массажу</div>
+
+            <div class="wating_wrapper">
+                <div class="wating_item">
+                    <img src="img/imgg-1.jpeg" alt="1" class="wating_img">
+                </div>
+                <div class="wating_item">
+                    <img src="img/imgg-2.jpeg" alt="2" class="wating_img">
+                </div>
+                <div class="wating_item">
+                    <img src="img/imgg-3.jpeg" alt="3" class="wating_img">
+                </div>
+            </div>
+            <div class="wating_wrapper">
+                <div class="wating_item">
+                    <img src="img/imgg-4.jpeg" alt="1" class="wating_img">
+                </div>
+                <div class="wating_item">
+                    <img src="img/imgg-5.jpeg" alt="2" class="wating_img">
+                </div>
+                <div class="wating_item">
+                    <img src="img/imgg-6.jpeg" alt="3" class="wating_img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-image: linear-gradient(to top, #24d459b7 20%, #efefef 80%)" id="ring" id="ringi">
+        <div class="footer_divider"></div>
+        <class class="footer_wrapper">
+            <!-- Если не оборачивать каждый блок в обертку - получится криво -->
+            
+            <div>
+                <div class="footer_social scale">
+                    <a href="https://www.instagram.com/massage_kostanay_tatyana/" class="footer_social_item">
+                        <img src="icons/instagram.png">
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <div class="footer_links">
+                    <script src="https://yastatic.net/s3/frontend/forms/_/embed.js"></script>
+                    <div style='transform-origin: 0 0; transform: scale(0.8)'>
+                    <iframe src="https://forms.yandex.ru/u/613e3ac4049083ab035faeea/?iframe=1" frameborder="0" name="ya-form-613e3ac4049083ab035faeea" width="550"></iframe></div>
+                        <!-- <fieldset>
+                        <div class="form-at">
+                            <div class="validate-input-at w-100" data-validate="Обязательное поле">
+                                <input class="input-at" type="text" name="name-at" placeholder="Ваше имя" />
+                                <span class="focus-input-at"></span>
+                            </div>
+                            <div class="validate-input-at w-100" data-validate="Обязательное поле">
+                                <input class="input-at" type="text" name="email-at" placeholder="Ваш телефон или email" />
+                                <span class="focus-input-at"></span>
+                            </div>
+                            <div class="validate-input-at" data-validate="Обязательное поле">
+                                <textarea class="input-at" name="message-at" placeholder="Ваше сообщение"></textarea>
+                                <span class="focus-input-at"></span>
+                            </div>
+                            <input checked="checked" class="input-at" id="checkbox-at" type="checkbox" name="checkbox-at" onchange="document.getElementById('submit-at').disabled = !this.checked;" />
+                            <label for="checkbox-at">
+                                Настоящим подтверждаю, что я ознакомлен и согласен с <a href="#rules">пользовательским соглашением</a>
+                            </label> 
+                            <input type="hidden" name="subject-at" value="Тема формы">
+                            <button id="submit-at" class="form-at-btn">Отправить</button>
+                        </div>
+                        <div class="result-at"></div>  
+                    </fieldset> -->
+                </div>
+            </div>
+            
+            <div>
+                <div class="footer_mobile">
+                    <div class="content-wrapper">
+                        <div class="face-block">
+                          <div class="eyes-wrapper">
+                            <div class="eye">
+                              <div class="pupil"></div>
+                            </div>
+                            <div class="eye">
+                              <div class="pupil"></div>
+                            </div>
+                          </div>
+                          <div class="mouth-wrapper">
+                            <div class="mouth"></div>
+                          </div>
+                        </div>
+                        <a class="call-to-action" href="#ringi" onclick="alert('Ваш подарочный код <MASSAGE> дает 10% скидку на любой массаж')">Подарок</a>
+                      </div>
+                </div>
+            </div>
+
+        </class>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/massage.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
+    <script src="js/slider.js"></script>
+    <script src="js/face.js"></script>
+
+</body>
+</html>

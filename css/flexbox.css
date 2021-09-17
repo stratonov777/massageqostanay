@@ -1,0 +1,68 @@
+.wating{
+    min-height: 604px;
+    background-image: linear-gradient(to top, #efefef 0%, white 50%);
+    /* background-color: #efefef; */
+    padding: 85px 0 75px 0;
+}
+
+.wating img{
+width: 320px;
+border-radius: 8%;
+transition: 1s;
+}
+
+.wating img:hover{
+    transform: scale(1.15);
+}
+
+.wating_header, .finish_header{
+    color: #252525;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.wating .waiting_divider, .finish .finish_divider{
+    width: 217px;
+    height: 4px;
+    background-color: #f9bf3b;
+    margin: 0 auto;
+    margin-top: 18px;
+}
+
+.wating .wating_subheader{
+    color: #4a4a4a;
+    font-family: Roboto;
+    font-size: 23px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 17px;
+}
+
+.wating .wating_wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+
+.wating .wating_wrapper .wating_item{
+    /* выравнивание блочно линейных элементов
+    vertical-align: top; */
+    width: 339px;
+    text-align: center;
+}
+
+.wating .wating_wrapper .wating_item .waiting_img{
+    width: 100%;
+}
+
+.wating .wating_wrapper .wating_item .waiting_description{
+    color: #4a4a4a;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 33px;
+}
